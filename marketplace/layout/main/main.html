@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>AGPlay</title>
+</head>
+<body>
+    <div class="main_wrapper">
+        <header class="main_header">
+            <a href="#">Главная страница</a>
+            <a href="#">Поиск игры</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Профиль</a>
+            <a href="#">Корзина</a>
+        </header>
+        <section class="trending_game">
+            <div class="trending_game_info">
+                <h3 class="trending_game_name">Counter Strike 2</h3>
+                <p class="trending_game_description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis culpa mollitia dolorem fugiat? Ut quis quisquam incidunt deleniti provident eum, culpa placeat dicta officia cupiditate itaque et ducimus consequuntur.
+                    Laborum, expedita. Pariatur quasi perferendis hic non ea harum, libero aut ut debitis sequi dolorum amet eum ullam vero? Corporis minima sapiente quod accusamus quam nulla dolores dolore nesciunt esse!
+                </p>
+                <button class="trending_game_redirect btn btn-secondary">
+                    Перейти
+                </button>
+            </div>
+        </section>
+        <main>
+            <section class="popular_games">
+                <span class="popular_label"> Популярно сейчас </span>
+                <div class="popular_games_collection">
+                    <div class="popular_game_card">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="popular_game_card_image" class="popular_game_card_image">
+                        <div class="popular_game_card_info">
+                            <span class="popular_game_card_name">Sekiro: Shadows Die Twice</span>
+                            <div class="popular_game_card_text">
+                                <span class="popular_game_card_price">$100</span>
+                                <span class="popular_game_card_platforms">PC, XBOX, PS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular_game_card">
+                        <img src="https://www.siliconera.com/wp-content/uploads/2022/02/Elden-Ring-Review.jpg?fit=700%2C394" alt="popular_game_card_image" class="popular_game_card_image">
+                        <div class="popular_game_card_info">
+                            <span class="popular_game_card_name">Elden Ring</span>
+                            <div class="popular_game_card_text">
+                                <span class="popular_game_card_price">$100</span>
+                                <span class="popular_game_card_platforms">PC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular_game_card">
+                        <img src="https://gaming-cdn.com/images/products/8855/616x353/lies-of-p-pc-game-steam-cover.jpg?v=1695052146" alt="popular_game_card_image" class="popular_game_card_image">
+                        <div class="popular_game_card_info">
+                            <span class="popular_game_card_name">Lies of P</span>
+                            <div class="popular_game_card_text">
+                                <span class="popular_game_card_price">$100</span>
+                                <span class="popular_game_card_platforms">PC, XBOX, PS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular_game_card">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/638970/capsule_616x353.jpg?t=1685702171" alt="popular_game_card_image" class="popular_game_card_image">
+                        <div class="popular_game_card_info">
+                            <span class="popular_game_card_name">Yakuza 0</span>
+                            <div class="popular_game_card_text">
+                                <span class="popular_game_card_price">$100</span>
+                                <span class="popular_game_card_platforms">PC</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular_game_card">
+                        <img src="https://blog.playstation.com/tachyon/2023/02/f321c065cf3f405b6d0ac06fd5a550d6a95b5a5e-scaled.jpg?resize=1088%2C612&crop_strategy=smart" alt="popular_game_card_image" class="popular_game_card_image">
+                        <div class="popular_game_card_info">
+                            <span class="popular_game_card_name">Baldur's Gate 3</span>
+                            <div class="popular_game_card_text">
+                                <span class="popular_game_card_price">$100</span>
+                                <span class="popular_game_card_platforms">XBOX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular_game_card">
+                        <img src="https://i.ytimg.com/vi/n2Q3YudILvE/maxresdefault.jpg" alt="popular_game_card_image" class="popular_game_card_image">
+                        <div class="popular_game_card_info">
+                            <span class="popular_game_card_name">Marvel's Spider Man</span>
+                            <div class="popular_game_card_text">
+                                <span class="popular_game_card_price">$100</span>
+                                <span class="popular_game_card_platforms">PS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main_catalog">
+                <span class="main_catalog_label"> Каталог игр </span>
+                <div class="main_catalog_contents">
+                    <ul class="main_catalog_filter">
+                        <li>
+                          <input type="radio" id="item1" name="main_catalog_filter_items" />
+                          <label for="item1">Популярное</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item2" name="main_catalog_filter_items" />
+                          <label for="item2">Скидки</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item3" name="main_catalog_filter_items" />
+                          <label for="item3">Экшен</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item4" name="main_catalog_filter_items" />
+                          <label for="item4">Приключение</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item5" name="main_catalog_filter_items" />
+                          <label for="item5">RPG</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item6" name="main_catalog_filter_items" />
+                          <label for="item6">Симуляторы</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item7" name="main_catalog_filter_items" />
+                          <label for="item7">Стратегии</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item8" name="main_catalog_filter_items" />
+                          <label for="item8">Спорт</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item9" name="main_catalog_filter_items" />
+                          <label for="item9">Гонки</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item10" name="main_catalog_filter_items" />
+                          <label for="item10">Казуальные</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="item11" name="main_catalog_filter_items" />
+                          <label for="item11">Все игры</label>
+                        </li>
+                    </ul>
+                    <div class="main_catalog_games_list">
+                        <div class="main_catalog_game_card">
+                            <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="game_image" class="main_catalog_game_image">
+                            <div class="main_catalog_game_card_info">
+                                <span class="main_catalog_game_card_name">Sekiro: Shadows Die Twice</span>
+                                <div class="main_catalog_game_card_text">
+                                    <span class="main_catalog_game_card_price">
+                                        $100
+                                        <span class="main_catalog_name_card_old_price">
+                                            $200
+                                        </span>
+                                    </span>
+                                    <span class="main_catalog_game_card_platforms">PS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_catalog_game_card">
+                            <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="game_image" class="main_catalog_game_image">
+                            <div class="main_catalog_game_card_info">
+                                <span class="main_catalog_game_card_name">Sekiro: Shadows Die Twice</span>
+                                <div class="main_catalog_game_card_text">
+                                    <span class="main_catalog_game_card_price">
+                                        $100
+                                        <span class="main_catalog_name_card_old_price">
+                                            $200
+                                        </span>
+                                    </span>
+                                    <span class="main_catalog_game_card_platforms">PS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_catalog_game_card">
+                            <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="game_image" class="main_catalog_game_image">
+                            <div class="main_catalog_game_card_info">
+                                <span class="main_catalog_game_card_name">Sekiro: Shadows Die Twice</span>
+                                <div class="main_catalog_game_card_text">
+                                    <span class="main_catalog_game_card_price">
+                                        $100
+                                        <span class="main_catalog_name_card_old_price">
+                                            $200
+                                        </span>
+                                    </span>
+                                    <span class="main_catalog_game_card_platforms">PS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_catalog_game_card">
+                            <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="game_image" class="main_catalog_game_image">
+                            <div class="main_catalog_game_card_info">
+                                <span class="main_catalog_game_card_name">Sekiro: Shadows Die Twice</span>
+                                <div class="main_catalog_game_card_text">
+                                    <span class="main_catalog_game_card_price">
+                                        $100
+                                        <span class="main_catalog_name_card_old_price">
+                                            $200
+                                        </span>
+                                    </span>
+                                    <span class="main_catalog_game_card_platforms">PS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_catalog_game_card">
+                            <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="game_image" class="main_catalog_game_image">
+                            <div class="main_catalog_game_card_info">
+                                <span class="main_catalog_game_card_name">Sekiro: Shadows Die Twice</span>
+                                <div class="main_catalog_game_card_text">
+                                    <span class="main_catalog_game_card_price">
+                                        $100
+                                        <span class="main_catalog_name_card_old_price">
+                                            $200
+                                        </span>
+                                    </span>
+                                    <span class="main_catalog_game_card_platforms">PS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_catalog_game_card">
+                            <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="game_image" class="main_catalog_game_image">
+                            <div class="main_catalog_game_card_info">
+                                <span class="main_catalog_game_card_name">Sekiro: Shadows Die Twice</span>
+                                <div class="main_catalog_game_card_text">
+                                    <span class="main_catalog_game_card_price">
+                                        $100
+                                        <span class="main_catalog_name_card_old_price">
+                                            $200
+                                        </span>
+                                    </span>
+                                    <span class="main_catalog_game_card_platforms">PS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_catalog_game_card">
+                            <img src="https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267" alt="game_image" class="main_catalog_game_image">
+                            <div class="main_catalog_game_card_info">
+                                <span class="main_catalog_game_card_name">Sekiro: Shadows Die Twice</span>
+                                <div class="main_catalog_game_card_text">
+                                    <span class="main_catalog_game_card_price">
+                                        $100
+                                        <span class="main_catalog_name_card_old_price">
+                                            $200
+                                        </span>
+                                    </span>
+                                    <span class="main_catalog_game_card_platforms">PS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
