@@ -122,7 +122,8 @@
     font-weight: 700;
 }
 
-.popular_game_card_price {
+.popular_game_card_price,
+.popular_game_card_platforms {
     color: #95a5a6;
     font-weight: 600;
 }
@@ -223,4 +224,5 @@
 .main_catalog_name_card_old_price {
     text-decoration:line-through;
     font-weight: 500;
+    margin-left: 5px;
 }
