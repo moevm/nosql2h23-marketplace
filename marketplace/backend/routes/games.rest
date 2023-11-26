@@ -1,0 +1,24 @@
+###
+GET http://localhost:8080/games/all
+###
+POST http://localhost:8080/games/add
+Content-Type: application/json
+
+{
+    "title": "Counter-String 3",
+    "description": "Описание описания",
+    "genre": "Стратегия"
+}
+
+###
+GET http://localhost:8080/games/id
+&id=65626ce5a0b35571d391fc5e
+
+###
+GET http://localhost:8080/games/genre/
+&genre="Шутер"
+
+###
+GET http://localhost:8080/games/random/
+?number=3
+

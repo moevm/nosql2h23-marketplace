@@ -1,0 +1,20 @@
+###
+GET http://localhost:8080/users/all
+###
+POST http://localhost:8080/users/add
+Content-Type: application/json
+
+{
+    "login": "user123",
+    "password": "user123",
+    "role": "Пользователь",
+    "name": "Игорь",
+    "email": "usern@mail.ru",
+    "is_banned": false
+}
+
+###
+GET http://localhost:8080/users/id/656204ccfd249f530b8e6446
+
+###
+GET http://localhost:8080/users/user/user123/user123
