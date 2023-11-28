@@ -35,10 +35,12 @@ const onAuthFormSubmit = (navigate) => {
     console.log("submit clicked")
 
     if (!isValidEmail(email)) {
+        alert("Неправильная почта")
         return
     }
 
     if (!isValidPassword(password)) {
+        alert("Неправильный пароль")
         return
     }
 

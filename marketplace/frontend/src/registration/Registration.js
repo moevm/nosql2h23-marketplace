@@ -40,14 +40,17 @@ const onRegFormSubmit = (navigate) => {
     console.log("submit clicked")
 
     if (!isValidName(name)) {
+        alert("Неправильное имя")
         return
     }
 
     if (!isValidEmail(email)) {
+        alert("Неправильная почта")
         return
     }
 
     if (password !== password_repeat || !isValidPassword(password)) {
+        alert("Неправильный пароль")
         return
     }
 

@@ -1,9 +1,9 @@
 
 const MainCatalog = ({mainCatalogFilters, games}) => {
 	return (
-		<section class="main_catalog">
-			<span class="main_catalog_label"> Каталог игр </span>
-			<div class="main_catalog_contents">
+		<section className="main_catalog">
+			<span className="main_catalog_label"> Каталог игр </span>
+			<div className="main_catalog_contents">
 				<MainCatalogFilters mainCatalogFilters={mainCatalogFilters} />
 				<MainCatalogGamesList games={games} />
 			</div>
@@ -12,7 +12,7 @@ const MainCatalog = ({mainCatalogFilters, games}) => {
 }
 
 const MainCatalogFilters = ({mainCatalogFilters}) => {
-	var itemIndex = 1
+	let itemIndex = 1;
 	const filtersUi = mainCatalogFilters.map((filter) => {
 		const itemId = "item" + itemIndex.toString()
 		itemIndex++
@@ -25,7 +25,7 @@ const MainCatalogFilters = ({mainCatalogFilters}) => {
 	})
 
 	return (
-		<ul class="main_catalog_filter">
+		<ul className="main_catalog_filter">
 			{filtersUi}
 		</ul>
 	)
@@ -38,7 +38,7 @@ const MainCatalogGamesList = ({games}) => {
 		)
 	})
 	return (
-		<div class="main_catalog_games_list">
+		<div className="main_catalog_games_list">
 			{gameCards}
 		</div>
 	)
@@ -48,7 +48,7 @@ const MainCatalogGameCard = ({ imgLink, title, currentPrice, oldPrice, currency 
 	const oldPriceUi = () => {
 		if (oldPrice != null) {
 			return (
-				<span class="main_catalog_name_card_old_price">
+				<span className="main_catalog_name_card_old_price">
 					{currency}{oldPrice}
 				</span>
 			) 
@@ -58,12 +58,12 @@ const MainCatalogGameCard = ({ imgLink, title, currentPrice, oldPrice, currency 
 	}
 
 	return (
-		<div class="main_catalog_game_card">
-			<img src={imgLink} alt="game_image" class="main_catalog_game_image" />
-			<div class="main_catalog_game_card_info">
-				<span class="main_catalog_game_card_name">{title}</span>
-				<div class="main_catalog_game_card_text">
-					<span class="main_catalog_game_card_price">
+		<div className="main_catalog_game_card">
+			<img src={imgLink} alt="game_image" className="main_catalog_game_image" />
+			<div className="main_catalog_game_card_info">
+				<span className="main_catalog_game_card_name">{title}</span>
+				<div className="main_catalog_game_card_text">
+					<span className="main_catalog_game_card_price">
 						{currency}{currentPrice}
 						{oldPriceUi()}
 					</span>
