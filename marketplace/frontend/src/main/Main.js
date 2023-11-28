@@ -4,7 +4,7 @@ import MainTitle from "./MainTitle.js"
 import MainContent from "./MainContent.js"
 import TrandingGame from "./TrandingGame.js"
 
-const Main = ({ data }) => {
+const Main = () => {
 	const headers = [
 		{link: "#", title: "Главная страница"},
 		{link: "#", title: "Поиск игры"},
