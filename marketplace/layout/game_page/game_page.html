@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="game_page.css">
+    <title>AGPlay</title>
+</head>
+<body>
+    <div class="game_page_wrapper">
+        <header class="main_header">
+            <a href="#">Главная страница</a>
+            <a href="#">Поиск игры</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Профиль</a>
+            <a href="#">Корзина</a>
+        </header>
+        <section id="game_page_info">
+            <h2>Информация и управление <button class="game_page_info_delete_btn btn btn-danger">Удалить игру</button></h2>
+            <div class="game_page_divider"></div>
+            <div class="game_page_info_panel">
+                <div class="game_page_info_charts">
+                    <div class="game_page_info_viewed">
+                        Посмотрели сегодня: 420 чел.
+                    </div>
+                    <div class="game_page_info_clicked">
+                        Кликнули на предложение: 40 чел.
+                    </div>
+                    <div class="game_page_info_commented">
+                        Оставили комментарии: 4 чел.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="game_image_section" style="background-image: url('https://oyster.ignimgs.com/mediawiki/apis.ign.com/yakuza-0/4/45/Yakuza_0_.jpg?width=1280');">
+            <h1>Yakuza 0</h1>
+            <img src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/yakuza-0/4/45/Yakuza_0_.jpg?width=1280" alt="">
+        </section>
+        <main id="game_page_main">
+            <section id="game_page_description_section">
+                <h2>Описание</h2>
+                <div class="game_page_divider"></div>
+                <div id="game_page_description">
+                    <b>Yakuza 0</b> - это игра в жанре экшен-приключения, разработанная и изданная компанией Sega. Она является предысторией серии Yakuza и разворачивается в конце 1980-х - начале 1990-х годов в вымышленном открытом мире Камурочо и Сотенбори, основанных на реальных местах в Токио и Осаке.
+Игра рассказывает историю двух главных героев, Казумы Киру и Горо Маджимы, погружая игроков в преступный мир Японии. Игроки могут участвовать в рукопашном бою, исследовать оживленные города и участвовать в различных побочных активностях, таких как караоке, танцы и мини-игры.
+Благодаря захватывающему сюжету, интенсивным боям и захватывающему открытому миру Yakuza 0 получила признание критиков за свою сюжетную линию и игровые механики. Она стала одной из самых популярных игр в серии Yakuza и была отмечена за аутентичное отображение японской культуры и общества во время экономического бума.
+                </div>
+                <div id="game_page_genres">
+                    <b>Жанр игры</b>: Экшен, Сюжет.
+                </div>
+                <button class="game_page_edit_info btn btn-primary">Редактировать информацию об игре</button>
+            </section>
+            <section id="game_page_offers_section">
+                <h2>Предложения <button id="game_page_offer_add_offer" class="btn btn-primary">+ Добавить предложение</button></h2>
+                <div class="game_page_divider"></div>
+                <div id="game_page_offers_list">
+                    <div class="game_page_offer">
+                        <div class="game_page_offer_label">AGPlay</div>
+                        <div class="game_page_offer_prices">
+                            <div class="game_page_offer_current_price">499 руб.</div>
+                            <div class="game_page_offer_default_price">1500 руб.</div>
+                        </div>
+                    </div>
+                    <div class="game_page_offer">
+                        <div class="game_page_offer_label">AGPlay</div>
+                        <div class="game_page_offer_prices">
+                            <div class="game_page_offer_current_price">499 руб.</div>
+                            <div class="game_page_offer_default_price">1500 руб.</div>
+                        </div>
+                    </div>
+                    <div class="game_page_offer">
+                        <div class="game_page_offer_label">AGPlay</div>
+                        <div class="game_page_offer_prices">
+                            <div class="game_page_offer_current_price">499 руб.</div>
+                            <div class="game_page_offer_default_price">1500 руб.</div>
+                        </div>
+                    </div>
+                    <div class="game_page_offer">
+                        <div class="game_page_offer_label">AGPlay</div>
+                        <div class="game_page_offer_prices">
+                            <div class="game_page_offer_current_price">499 руб.</div>
+                            <div class="game_page_offer_default_price">1500 руб.</div>
+                        </div>
+                    </div>
+                    <div class="game_page_offer">
+                        <div class="game_page_offer_label">AGPlay</div>
+                        <div class="game_page_offer_prices">
+                            <div class="game_page_offer_current_price">499 руб.</div>
+                            <div class="game_page_offer_default_price">1500 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <section id="game_page_comments_section">
+                <h2>Комментарии <button class="btn btn-primary"> + Написать комментарий</button></h2>
+                <div class="game_page_divider"></div>
+                <div id="game_page_comments_list">
+                    <div class="game_page_comment">
+                        <div class="game_page_comment_user_info">
+                            <img src="https://sun9-1.userapi.com/impg/uaxJmjCLVDyC8xFr0YuPSDOBaBP407iVTisVnQ/kEM5aoNdjdY.jpg?size=1440x1432&quality=95&sign=459be18ad34b12714c2f9ae22d9aa503&type=album" alt="" class="game_page_comment_user_avatar">
+                            <div class="game_page_comment_user_name">Deimos</div>
+                            <div class="game_page_comment_user_date">13.01.2023</div>
+                        </div>
+                        <div class="game_page_comment_content">
+                            <div class="game_page_comment_rating positive">Крутой сюжет!</div>
+                            <div class="game_page_comment_text">Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую!</div>
+                            <div class="game_page_buttons">
+                                <button class="delete-comment btn btn-danger">Удалить</button>
+                                <button class="ban-comment btn btn-warning">Бан</button>
+                                <button class="report-comment btn btn-secondary">Пожаловаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game_page_comment">
+                        <div class="game_page_comment_user_info">
+                            <img src="https://sun9-1.userapi.com/impg/uaxJmjCLVDyC8xFr0YuPSDOBaBP407iVTisVnQ/kEM5aoNdjdY.jpg?size=1440x1432&quality=95&sign=459be18ad34b12714c2f9ae22d9aa503&type=album" alt="" class="game_page_comment_user_avatar">
+                            <div class="game_page_comment_user_name">Deimos</div>
+                            <div class="game_page_comment_user_date">13.01.2023</div>
+                        </div>
+                        <div class="game_page_comment_content">
+                            <div class="game_page_comment_rating positive">Крутой сюжет!</div>
+                            <div class="game_page_comment_text">Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую!</div>
+                            <div class="game_page_buttons">
+                                <button class="delete-comment btn btn-danger">Удалить</button>
+                                <button class="ban-comment btn btn-warning">Бан</button>
+                                <button class="report-comment btn btn-secondary">Пожаловаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game_page_comment">
+                        <div class="game_page_comment_user_info">
+                            <img src="https://sun9-1.userapi.com/impg/uaxJmjCLVDyC8xFr0YuPSDOBaBP407iVTisVnQ/kEM5aoNdjdY.jpg?size=1440x1432&quality=95&sign=459be18ad34b12714c2f9ae22d9aa503&type=album" alt="" class="game_page_comment_user_avatar">
+                            <div class="game_page_comment_user_name">Deimos</div>
+                            <div class="game_page_comment_user_date">13.01.2023</div>
+                        </div>
+                        <div class="game_page_comment_content">
+                            <div class="game_page_comment_rating positive">Крутой сюжет!</div>
+                            <div class="game_page_comment_text">Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую!</div>
+                            <div class="game_page_buttons">
+                                <button class="delete-comment btn btn-danger">Удалить</button>
+                                <button class="ban-comment btn btn-warning">Бан</button>
+                                <button class="report-comment btn btn-secondary">Пожаловаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game_page_comment">
+                        <div class="game_page_comment_user_info">
+                            <img src="https://sun9-1.userapi.com/impg/uaxJmjCLVDyC8xFr0YuPSDOBaBP407iVTisVnQ/kEM5aoNdjdY.jpg?size=1440x1432&quality=95&sign=459be18ad34b12714c2f9ae22d9aa503&type=album" alt="" class="game_page_comment_user_avatar">
+                            <div class="game_page_comment_user_name">Deimos</div>
+                            <div class="game_page_comment_user_date">13.01.2023</div>
+                        </div>
+                        <div class="game_page_comment_content">
+                            <div class="game_page_comment_rating positive">Крутой сюжет!</div>
+                            <div class="game_page_comment_text">Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую!</div>
+                            <div class="game_page_buttons">
+                                <button class="delete-comment btn btn-danger">Удалить</button>
+                                <button class="ban-comment btn btn-warning">Бан</button>
+                                <button class="report-comment btn btn-secondary">Пожаловаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game_page_comment">
+                        <div class="game_page_comment_user_info">
+                            <img src="https://sun9-1.userapi.com/impg/uaxJmjCLVDyC8xFr0YuPSDOBaBP407iVTisVnQ/kEM5aoNdjdY.jpg?size=1440x1432&quality=95&sign=459be18ad34b12714c2f9ae22d9aa503&type=album" alt="" class="game_page_comment_user_avatar">
+                            <div class="game_page_comment_user_name">Deimos</div>
+                            <div class="game_page_comment_user_date">13.01.2023</div>
+                        </div>
+                        <div class="game_page_comment_content">
+                            <div class="game_page_comment_rating positive">Крутой сюжет!</div>
+                            <div class="game_page_comment_text">Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую! Пацаны, го на старую!</div>
+                            <div class="game_page_buttons">
+                                <button class="delete-comment btn btn-danger">Удалить</button>
+                                <button class="ban-comment btn btn-warning">Бан</button>
+                                <button class="report-comment btn btn-secondary">Пожаловаться</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
