@@ -4,7 +4,7 @@ const MainTitle = ({headers}) => {
 	})
 	
 	return (
-		<header class="main_header">
+		<header className="main_header">
 			{headerTitlesUi}
 		</header>
 	)

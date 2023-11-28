@@ -2,9 +2,9 @@ import React from "react"
 import "./main.css"
 import MainTitle from "./MainTitle.js"
 import MainContent from "./MainContent.js"
-import TrandingGame from "./TrandingGame.js"
+import TrendingGame from "./TrendingGame.js"
 
-const Main = ({ data }) => {
+const Main = () => {
 	const headers = [
 		{link: "#", title: "Главная страница"},
 		{link: "#", title: "Поиск игры"},
@@ -12,8 +12,8 @@ const Main = ({ data }) => {
 		{link: "#", title: "Профиль"},
 		{link: "#", title: "Корзина"}
 	]
-	const trandingGameTitle = "Counter Strike 2"
-	const trandingGameDescription = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis culpa mollitia dolorem fugiat? Ut quis quisquam incidunt deleniti provident eum, culpa placeat dicta officia cupiditate itaque et ducimus consequuntur. Laborum, expedita. Pariatur quasi perferendis hic non ea harum, libero aut ut debitis sequi dolorum amet eum ullam vero? Corporis minima sapiente quod accusamus quam nulla dolores dolore nesciunt esse!'
+	const trendingGameTitle = "Counter Strike 2"
+	const trendingGameDescription = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis culpa mollitia dolorem fugiat? Ut quis quisquam incidunt deleniti provident eum, culpa placeat dicta officia cupiditate itaque et ducimus consequuntur. Laborum, expedita. Pariatur quasi perferendis hic non ea harum, libero aut ut debitis sequi dolorum amet eum ullam vero? Corporis minima sapiente quod accusamus quam nulla dolores dolore nesciunt esse!'
 	const games =  [
 			{
 				imgLink: "https://cdn.akamai.steamstatic.com/steam/apps/814380/capsule_616x353.jpg?t=1678991267",
@@ -80,9 +80,9 @@ const Main = ({ data }) => {
 	]
 
 	return (
-		<div class="main_wrapper">
+		<div className="main_wrapper">
 			<MainTitle headers={headers}/>
-			<TrandingGame gameTitle={trandingGameTitle} gameDescription={trandingGameDescription} />
+			<TrendingGame gameTitle={trendingGameTitle} gameDescription={trendingGameDescription} />
 			<MainContent popularGames={games} mainCatalogFilters={mainCatalogFilters} catalogGames={catalogGames}/>
 		</div>
 	);

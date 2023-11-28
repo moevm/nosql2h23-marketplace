@@ -5,9 +5,9 @@ const PopularGames = ({games}) => {
 	})
 
 	return (
-			<section class="popular_games">
-				<span class="popular_label"> Популярно сейчас </span>
-				<div class="popular_games_collection">
+			<section className="popular_games">
+				<span className="popular_label"> Популярно сейчас </span>
+				<div className="popular_games_collection">
 					{gamesUi}
 				</div>
 			</section>
@@ -16,12 +16,12 @@ const PopularGames = ({games}) => {
 
 const PopularGameCard = ({imgLink, title, price, currency}) => {
 	return (
-		<div class="popular_game_card">
-		<img src={imgLink} alt="popular_game_card_image" class="popular_game_card_image"/>
-		<div class="popular_game_card_info">
-			<span class="popular_game_card_name">{title}</span>
-			<div class="popular_game_card_text">
-				<span class="popular_game_card_price">{currency}{price}</span>
+		<div className="popular_game_card">
+		<img src={imgLink} alt="popular_game_card_image" className="popular_game_card_image"/>
+		<div className="popular_game_card_info">
+			<span className="popular_game_card_name">{title}</span>
+			<div className="popular_game_card_text">
+				<span className="popular_game_card_price">{currency}{price}</span>
 			</div>
 		</div>
 	</div>
