@@ -24,7 +24,7 @@ const Registration = () => {
                 </form>
                 <div className="registration_divider"></div>
                 <div>
-                    Есть аккаунт? <a href="/">Войдите</a>
+                    Есть аккаунт? <a href={routerLinks.auth}>Войдите</a>
                 </div>
             </div>
         </div>
@@ -56,7 +56,10 @@ const onRegFormSubmit = (navigate) => {
 
     // TODO: добавить сохранение данных нового пользователя
 
-    navigate(routerLinks.main)
+    navigate({
+        pathname: routerLinks.main,
+        search: "1234" // FIXME
+    })
 }
 
 const isValidName = (name) => {
