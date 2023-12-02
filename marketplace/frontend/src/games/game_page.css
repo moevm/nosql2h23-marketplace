@@ -1,0 +1,222 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+.game_page_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #34495e;
+}
+
+.game_page_wrapper a:link,
+.game_page_wrapper a:active,
+.game_page_wrapper a:hover {
+    text-decoration: none;
+}
+
+.main_header {
+    height: 50px;
+    width: 100%;
+    background-color: #34495e;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main_header a {
+    margin-right: 20px;
+    color: #fff;
+}
+
+#game_image_section {
+    width: 100%;
+    position: relative;
+    background-size: 1920px;
+    background-color: #00000052;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url('https://oyster.ignimgs.com/mediawiki/apis.ign.com/yakuza-0/4/45/Yakuza_0_.jpg?width=1280');
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 30px;
+}
+
+#game_image_section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c2733;
+    opacity: 0.98;
+}
+
+#game_image_section h1 {
+    color: #fff;
+    font-weight: 700;
+}
+
+#game_image_section img {
+    width: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+#game_image_section * {
+    z-index: 10;
+}
+
+#game_page_main {
+    width: 100%;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game_page_main section {
+    width: 60%;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.game_page_divider {
+    margin: 10px 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+#game_page_description {
+    text-align: justify;
+}
+
+#game_page_description,
+#game_page_genres {
+    font-size: 18px;
+}
+
+#game_page_genres {
+    margin: 10px 0;
+}
+
+#game_page_offers_list,
+#game_page_comments_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.game_page_offer {
+    width: 100%;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.game_page_offer:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.game_page_offer_label {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.game_page_offer_current_price {
+    font-weight: 700;
+}
+
+.game_page_offer_default_price {
+    text-decoration: line-through;
+}
+
+.game_page_comment {
+    display: flex;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game_page_comment:hover {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.game_page_comment_user_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game_page_comment_user_name {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.game_page_comment_user_avatar {
+    width: 100px;
+}
+
+.game_page_comment_content {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.game_page_comment_content .positive{
+    background-color: #2ecc71;
+}
+
+.game_page_comment_rating {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.game_page_comment_text {
+    text-align: justify;
+    margin: 20px 0px;
+}
+
+.game_page_buttons button {
+    margin-right: 10px;
+}
+
+#game_page_info {
+    width: 60%;
+    margin: 20px 0;
+}
+
+#game_page_info h2 {
+    color: #fff;
+}
+
+.game_page_info_panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    font-size: 18px;
+}
+
+.game_page_info_delete_btn {
+    align-self: center;
+}
