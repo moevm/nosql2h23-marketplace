@@ -22,7 +22,7 @@ const Auth = () => {
                 </form>
                 <div className="auth_divider"></div>
                 <div>
-                    Новичок? <a href="reg"> Зарегистрируйтесь</a>
+                    Новичок? <a href={routerLinks.registration}> Зарегистрируйтесь</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,10 @@ const onAuthFormSubmit = (navigate) => {
 
     // TODO: добавить получение данных пользователя
 
-    navigate(routerLinks.main)
+    navigate({
+        pathname: routerLinks.main,
+        search: "1234" // FIXME
+    })
 }
 
 const isValidEmail = (email) => {
