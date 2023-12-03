@@ -50,6 +50,16 @@ const UserPage = () => {
 }
 
 const UserInfo = ({imgLink, name, email, gamesBoughtAmount, role, registrationDate}) => {
+    const goToAdminPanelButtonProvider = () => {
+        if (role === "Администратор") {
+            return (
+                <button id="go_to_admin_panel" className="btn btn-primary">Перейти в панель администратора</button>
+            )
+        } else {
+            return null;
+        }
+    }
+
     return (
         <section id="user_info_section">
             <h1>Информация о пользователе</h1>
@@ -67,7 +77,7 @@ const UserInfo = ({imgLink, name, email, gamesBoughtAmount, role, registrationDa
                     <div id="user_games_bought">Куплено игр: <b>{gamesBoughtAmount}</b></div>
                     <div id="user_role">Роль: <b>{role}</b></div>
                     <div id="user_registration_date">Дата регистрации: <b>{registrationDate}</b></div>
-                    <button id="go_to_admin_panel" className="btn btn-primary">Перейти в панель администратора</button>
+                    {goToAdminPanelButtonProvider()}
                 </div>
             </div>
         </section>
