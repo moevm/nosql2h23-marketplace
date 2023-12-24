@@ -1,4 +1,7 @@
 # Запуск сервера
+Команда для запуска(из папки nosql2h23-marketplace/marketplace/backend)
+
+        npm run devStart
 Сервер запущен корректно если вы увидели в консоли следующее:
         
         Server running on 8080 port
