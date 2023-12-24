@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const gameStatistic = new mongoose.Schema({
+const gameStatisticSchema = new mongoose.Schema({
     game_id : {
         type: mongoose.Types.ObjectId,
         required: true
@@ -10,7 +10,7 @@ const gameStatistic = new mongoose.Schema({
         type: String,
         required: true
     },
-    date : {
+    created_at : {
         type: Number,
         required: true,
         default: Date.now
@@ -20,3 +20,4 @@ const gameStatistic = new mongoose.Schema({
         required: true
     },
 })
+module.exports = mongoose.model("GameStatistic", gameStatisticSchema)
