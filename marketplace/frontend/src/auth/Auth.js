@@ -5,7 +5,8 @@ import { getUserByLoginPassword } from "../UserRequests";
 
 const Auth = () => {
     const navigate = useNavigate()
-    const onSubmit = () => {
+    const onSubmit = e => {
+        e.preventDefault();
         onAuthFormSubmit(navigate)
     }
 
@@ -55,7 +56,7 @@ const onAuthFormSubmit = async (navigate) => {
         console.log(res.body)
 
         // Сохранить данные в localStorage
-        
+
     } else {
         alert(res)
     }

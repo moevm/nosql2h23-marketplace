@@ -5,7 +5,8 @@ import { addUser } from "../UserRequests";
 
 const Registration = () => {
     const navigate = useNavigate()
-    const onSubmit = () => {
+    const onSubmit = e => {
+        e.preventDefault();
         onRegFormSubmit(navigate)
     }
 
@@ -65,7 +66,7 @@ const onRegFormSubmit = async (navigate) => {
         avatar_data: "https://cdn-icons-png.flaticon.com/512/3541/3541871.png"
     }
 
-    let res = await addUser(email, password);
+    let res = await addUser(user);
     if (res["status"] === 200) {
         navigate({
             pathname: routerLinks.main,
