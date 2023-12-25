@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./main.css"
 import MainTitle from "./MainTitle.js"
 import MainContent from "./MainContent.js"
@@ -79,11 +79,21 @@ const Main = () => {
 		},
 	]
 
+	const [draw, setDraw] = useState(false);
+	useEffect(() => {
+		setTimeout(() => setDraw(true), 5000)
+	}, []); 
+
 	return (
-		<div className="main_wrapper">
-			<MainTitle headers={headers}/>
-			<TrendingGame gameTitle={trendingGameTitle} gameDescription={trendingGameDescription} />
-			<MainContent popularGames={games} mainCatalogFilters={mainCatalogFilters} catalogGames={catalogGames}/>
+		<div>
+			{ draw ? (
+					<div className="main_wrapper">
+					<MainTitle headers={headers}/>
+					<TrendingGame gameTitle={trendingGameTitle} gameDescription={trendingGameDescription} />
+					<MainContent popularGames={games} mainCatalogFilters={mainCatalogFilters} catalogGames={catalogGames}/>
+					</div>) : 
+					(<p>Загрузка...</p>)
+			}
 		</div>
 	);
 }

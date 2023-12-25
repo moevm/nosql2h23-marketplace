@@ -65,6 +65,7 @@ const onRegFormSubmit = (navigate) => {
 const isValidName = (name) => {
     return name === "admin" || (name.length >= 5)
 }
+
 const isValidEmail = (email) => {
     return email === "admin" || (email.length >= 5 && email.indexOf('@') !== -1)
 }
