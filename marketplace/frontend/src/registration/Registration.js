@@ -22,7 +22,7 @@ const Registration = () => {
                            placeholder="Password"/>
                     <input id="input_password_repeat" className="input-group input-group-sm mb-3" type="password"
                            placeholder="Repeat password"/>
-                    <button onClick={onSubmit} type="submit" className="btn btn-primary">Войти</button>
+                    <button onClick={onSubmit} type="submit" className="btn btn-primary">Зарегистрироваться</button>
                 </form>
                 <div className="registration_divider"></div>
                 <div>
@@ -67,18 +67,20 @@ const onRegFormSubmit = async (navigate) => {
     }
 
     let res = await addUser(user);
+    console.log(res.status)
+
     if (res["status"] === 200) {
+        const data = await res.json()
         navigate({
-            pathname: routerLinks.main,
+            pathname: routerLinks.auth,
             search: "1234" 
         })
-
+        
+        res = await res.json()
         console.log(res.body)
-
-        // Сохранить данные в localStorage
         
     } else {
-        alert(res)
+        alert(res["status"])
     }
 }
 

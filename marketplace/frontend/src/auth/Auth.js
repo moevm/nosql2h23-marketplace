@@ -46,20 +46,20 @@ const onAuthFormSubmit = async (navigate) => {
         return
     }
 
-    let res = await getUserByLoginPassword(email, password);
-    console.log(res.body)
+    let res = await getUserByLoginPassword(email, String(password));
+    console.log(res.status)
+
     if (res["status"] === 200) {
+        const data = await res.json()
         navigate({
             pathname: routerLinks.main,
-            search: "1234" 
+            //search: "1234" 
         })
 
-        console.log(res.body)
-
-        // Сохранить данные в localStorage
-
+        localStorage.setItem('user', JSON.stringify(data[0]));
+        console.log(localStorage.getItem('user'));
     } else {
-        alert(res)
+        alert(res["status"])
     }
 }
 

@@ -16,10 +16,10 @@ export async function getUserById(id) {
 }
 
 export async function getUserByLoginPassword(login, password) {
-    const response = await fetch(rootUrl + userRootUrl + "login_password/" + login + "/" + password , {
+    const response = await fetch(rootUrl + userRootUrl + "user/" + login + "/" + password , {
         method: "GET", 
-    });
-    return await response.json();
+    })
+    return response;
 }
 
 export async function addUser(user) {
@@ -30,6 +30,6 @@ export async function addUser(user) {
         method: "POST", 
         body: JSON.stringify(user)
     });
-    return await response.json();
+    return response;
 }
 
