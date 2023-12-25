@@ -47,6 +47,7 @@ const onAuthFormSubmit = async (navigate) => {
     }
 
     let res = await getUserByLoginPassword(email, password);
+    console.log(res.body)
     if (res["status"] === 200) {
         navigate({
             pathname: routerLinks.main,

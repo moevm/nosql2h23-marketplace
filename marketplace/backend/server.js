@@ -9,6 +9,9 @@ const db = mongoose.connection;
 const port = process.env.PORT;
 const usersRouter = require("./routes/users");
 const gamesRouter = require("./routes/games")
+const cors = require("cors")
+
+app.use(cors())
 app.use("/games", gamesRouter)
 app.use("/users", usersRouter);
 app.use(express.json());
