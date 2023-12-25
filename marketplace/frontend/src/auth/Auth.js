@@ -59,4 +59,5 @@ const isValidEmail = (email) => {
 const isValidPassword = (password) => {
     return password === "admin" || password.length >= 8
 }
+
 export default Auth;

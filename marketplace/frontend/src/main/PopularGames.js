@@ -1,4 +1,3 @@
-
 const PopularGames = ({games}) => {
 	const gamesUi = games.map((game) => {
 		return <PopularGameCard imgLink={game.imgLink} title={game.title} price={game.price} currency={game.currency} />

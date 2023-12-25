@@ -1,5 +1,5 @@
 const MainTitle = ({headers}) => {
-	const headerTitlesUi = headers.map ((element) => {
+	const headerTitlesUi = headers.map((element) => {
 		return <a href={element.link}>{element.title}</a>
 	})
 	
