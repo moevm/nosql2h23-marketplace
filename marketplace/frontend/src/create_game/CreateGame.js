@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import "./create_game.css"
 
 const CreateGame = () => {
-    let offers = []
-    const [offersState, setOffersState] = useState(offers);
+    const [offersState, setOffersState] = useState([]);
 
     const user = localStorage.getItem("user")
 	const link_to_user = user ? "/user_page": "/";
@@ -26,11 +25,8 @@ const CreateGame = () => {
         const curr_price = document.getElementById("offer_current_price").value;
         const def_price = document.getElementById("offer_default_price").value;
 
-        // Push'em to the array
-        offers.push({label, url, curr_price, def_price})
-
         // Update state
-        setOffersState(offers)
+        setOffersState([...offersState, {label, url, curr_price, def_price}])
         console.log(offersState) // Срабатывает - массив меняется
     }
 
@@ -98,7 +94,7 @@ const CreateGame = () => {
             <h3>Предложения</h3>
             <section id="offers">
                 {offersState.map((value, index) => {
-                    (
+                    return (
                         <div class="offer" key={index}>
                             <div class="offer_left">
                                 <span class="offer_label">{value.label}</span>
