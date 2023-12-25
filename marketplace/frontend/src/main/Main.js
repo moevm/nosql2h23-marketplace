@@ -5,13 +5,17 @@ import MainContent from "./MainContent.js"
 import TrendingGame from "./TrendingGame.js"
 
 const Main = () => {
+	const user = localStorage.getItem("user")
+	const link_to_user = user ? "/user_page": "/";
 	const headers = [
-		{link: "#", title: "Главная страница"},
-		{link: "#", title: "Поиск игры"},
-		{link: "#", title: "Поддержка"},
-		{link: "#", title: "Профиль"},
-		{link: "#", title: "Корзина"}
+		{key: 0, link: "#", title: "Главная страница"},
+		{key: 1, link: "#", title: "Поиск игры"},
+		{key: 2, link: "#", title: "Поддержка"},
+		{key: 3, link: link_to_user, title: "Профиль"},
+		{key: 4, link: "#", title: "Корзина"},
+		{key: 5, link: "#", title: "Создать игру"},
 	]
+
 	const trendingGameTitle = "Counter Strike 2"
 	const trendingGameDescription = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perspiciatis culpa mollitia dolorem fugiat? Ut quis quisquam incidunt deleniti provident eum, culpa placeat dicta officia cupiditate itaque et ducimus consequuntur. Laborum, expedita. Pariatur quasi perferendis hic non ea harum, libero aut ut debitis sequi dolorum amet eum ullam vero? Corporis minima sapiente quod accusamus quam nulla dolores dolore nesciunt esse!'
 	const games =  [

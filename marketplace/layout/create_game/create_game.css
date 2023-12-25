@@ -1,0 +1,35 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+.create_game_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #34495e;
+}
+
+.create_game_wrapper a:link,
+.create_game_wrapper a:active,
+.create_game_wrapper a:hover {
+    text-decoration: none;
+}
+
+.main_header {
+    height: 50px;
+    width: 100%;
+    background-color: #34495e;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main_header a {
+    margin-right: 20px;
+    color: #fff;
+}
+
+

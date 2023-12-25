@@ -30,6 +30,7 @@ router.get("/genre/:genre", (req, res) => {
             res.status(500).json({ message: err.message })
         })
 })
+
 // Получение заданного количества случайных игр
 router.get("/random/:number", (req, res) => {
     Game.aggregate().sample(parseInt(req.params['number']))

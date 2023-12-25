@@ -1,10 +1,12 @@
 import "./registration.css"
 import {useNavigate} from "react-router-dom";
 import routerLinks from '../utils/router_links'
+import { addUser } from "../UserRequests";
 
 const Registration = () => {
     const navigate = useNavigate()
-    const onSubmit = () => {
+    const onSubmit = e => {
+        e.preventDefault();
         onRegFormSubmit(navigate)
     }
 
@@ -20,7 +22,7 @@ const Registration = () => {
                            placeholder="Password"/>
                     <input id="input_password_repeat" className="input-group input-group-sm mb-3" type="password"
                            placeholder="Repeat password"/>
-                    <button onClick={onSubmit} type="submit" className="btn btn-primary">Войти</button>
+                    <button onClick={onSubmit} type="submit" className="btn btn-primary">Зарегистрироваться</button>
                 </form>
                 <div className="registration_divider"></div>
                 <div>
@@ -31,7 +33,7 @@ const Registration = () => {
     )
 }
 
-const onRegFormSubmit = (navigate) => {
+const onRegFormSubmit = async (navigate) => {
     const email = document.getElementById("input_email").value
     const name = document.getElementById("input_name").value
     const password = document.getElementById("input_password").value
@@ -54,12 +56,32 @@ const onRegFormSubmit = (navigate) => {
         return
     }
 
-    // TODO: добавить сохранение данных нового пользователя
+    const user = {
+        name,
+        email,
+        password,
+        login: email,
+        role: "user",
+        is_banned: false,
+        avatar_data: "https://cdn-icons-png.flaticon.com/512/3541/3541871.png"
+    }
 
-    navigate({
-        pathname: routerLinks.main,
-        search: "1234" // FIXME
-    })
+    let res = await addUser(user);
+    console.log(res.status)
+
+    if (res["status"] === 200) {
+        const data = await res.json()
+        navigate({
+            pathname: routerLinks.auth,
+            search: "1234" 
+        })
+        
+        res = await res.json()
+        console.log(res.body)
+        
+    } else {
+        alert(res["status"])
+    }
 }
 
 const isValidName = (name) => {
