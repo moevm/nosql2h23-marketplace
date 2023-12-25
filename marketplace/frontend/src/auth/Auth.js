@@ -1,6 +1,7 @@
 import "./auth.css"
 import {useNavigate} from "react-router-dom";
 import routerLinks from '../utils/router_links'
+import { getUserByLoginPassword } from "../UserRequests"; 
 
 const Auth = () => {
     const navigate = useNavigate()
@@ -29,7 +30,7 @@ const Auth = () => {
     )
 }
 
-const onAuthFormSubmit = (navigate) => {
+const onAuthFormSubmit = async (navigate) => {
     const email = document.getElementById("input_email").value
     const password = document.getElementById("input_password").value
     console.log("submit clicked")
@@ -44,12 +45,20 @@ const onAuthFormSubmit = (navigate) => {
         return
     }
 
-    // TODO: добавить получение данных пользователя
+    let res = await getUserByLoginPassword(email, password);
+    if (res["status"] === 200) {
+        navigate({
+            pathname: routerLinks.main,
+            search: "1234" 
+        })
 
-    navigate({
-        pathname: routerLinks.main,
-        search: "1234" // FIXME
-    })
+        console.log(res.body)
+
+        // Сохранить данные в localStorage
+        
+    } else {
+        alert(res)
+    }
 }
 
 const isValidEmail = (email) => {
