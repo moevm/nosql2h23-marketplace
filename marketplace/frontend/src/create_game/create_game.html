@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="create_game.css">
+    <title>AGPlay</title>
+</head>
+<body>
+    <div class="create_game_wrapper">
+        <header class="main_header">
+            <a href="#">Главная страница</a>
+            <a href="#">Поиск игры</a>
+            <a href="#">Поддержка</a>
+            <a href="#">Профиль</a>
+            <a href="#">Корзина</a>
+        </header>
+        <main id="game_creation">
+
+            <h3>Выберите название для игры</h3>
+            <input id="game_label" type="text" placeholder="Название игры">
+
+            <h3 for="game_cover">Выберите изображение для обложки игры</h3>
+            <input type="file" id="game_cover" name="game_cover" accept="image/png, image/jpeg" />
+            <img src="" alt="" id="imageDisplay">
+
+            <h3 for="game_description">Введите описание для игры</h3>
+            <textarea id="game_description" type="text" placeholder="Описание"></textarea>
+
+            <fieldset id="game_genre">
+                <h3>Определите жанр игры</h3>
+                
+                <div id="genre_cases">
+                <div>
+                  <input type="checkbox" id="genre_action" name="genre" checked />
+                  <label for="genre_action">Экшен</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="genre_adventure" name="genree" checked />
+                    <label for="genre_adventure">Приключение</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="genre_rpg" name="genre" checked />
+                    <label for="genre_rpg">RPG</label>
+                </div>  
+
+                <div>
+                    <input type="checkbox" id="genre_sim" name="genre" checked />
+                    <label for="genre_sim">Симулятор</label>
+                  </div>
+  
+                  <div>
+                      <input type="checkbox" id="genre_strategy" name="genre" checked />
+                      <label for="genre_strategy">Стратегия</label>
+                  </div>
+  
+                  <div>
+                      <input type="checkbox" id="genre_sport" name="genre" checked />
+                      <label for="genre_sport">Спорт</label>
+                  </div> 
+
+                  <div>
+                    <input type="checkbox" id="genre_race" name="genre" checked />
+                    <label for="genre_race">Гонки</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="genre_casual" name="genre" checked />
+                    <label for="genre_casual">Казуальные</label>
+                </div> 
+                </div>
+            </fieldset>
+
+
+            <h3>Предложения</h3>
+            <section id="offers">
+                <div class="offer">
+                    <div class="offer_left">
+                        <span class="offer_label">AGPlay</span>
+                        <span class="offer_url">http://127.0.0.1:5500/marketplace/layout/create_game/create_game.html</span>
+                    </div>
+                    <div class="offer_right">
+                        <span class="current_price">500$</span>
+                        <span class="default_price">1500$</span>
+                    </div>
+                </div>
+            </section>
+            <form id="add_offer_section">
+                <label for="offer_label">Название сайта</label>
+                <input id="offer_label" type="text" placeholder="Название сайта">
+
+                <label for="offer_link">Ссылка на предложение</label>
+                <input id="offer_link" type="text" placeholder="url предложения">
+
+                <label for="offer_current_price">Текущая цена</label>
+                <input id="offer_current_price" type="text" placeholder="Текущая цена">
+
+                <label for="offer_default_price">Стандартная цена</label>
+                <input id="offer_default_price" type="text" placeholder="Стандартная цена">
+
+                <button type="submit" class="btn btn-secondary">Добавить предложение</button>
+            </form>
+
+            <button id="add_game" class="btn btn-success">Добавить игру</button>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript для отображения выбранной картинки
+        document.getElementById('game_cover').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imageDisplay').setAttribute('src', e.target.result);
+            }
+            reader.readAsDataURL(file);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

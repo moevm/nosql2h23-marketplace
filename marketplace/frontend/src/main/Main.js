@@ -8,12 +8,12 @@ const Main = () => {
 	const user = localStorage.getItem("user")
 	const link_to_user = user ? "/user_page": "/";
 	const headers = [
-		{key: 0, link: "#", title: "Главная страница"},
+		{key: 0, link: "/main", title: "Главная страница"},
 		{key: 1, link: "#", title: "Поиск игры"},
 		{key: 2, link: "#", title: "Поддержка"},
 		{key: 3, link: link_to_user, title: "Профиль"},
 		{key: 4, link: "#", title: "Корзина"},
-		{key: 5, link: "#", title: "Создать игру"},
+		{key: 5, link: "/create_game", title: "Создать игру"},
 	]
 
 	const trendingGameTitle = "Counter Strike 2"
@@ -85,7 +85,7 @@ const Main = () => {
 
 	const [draw, setDraw] = useState(false);
 	useEffect(() => {
-		setTimeout(() => setDraw(true), 5000)
+		setTimeout(() => setDraw(true), 2000)
 	}, []); 
 
 	return (

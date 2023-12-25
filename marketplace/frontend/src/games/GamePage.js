@@ -3,13 +3,16 @@ import MainTitle from "../main/MainTitle.js"
 import React from "react";
 
 const GamePage = () => {
-    const headers = [
-        {link: "#", title: "Главная страница"},
-        {link: "#", title: "Поиск игры"},
-        {link: "#", title: "Поддержка"},
-        {link: "#", title: "Профиль"},
-        {link: "#", title: "Корзина"}
-    ]
+    const user = localStorage.getItem("user")
+	const link_to_user = user ? "/user_page": "/";
+	const headers = [
+		{key: 0, link: "/main", title: "Главная страница"},
+		{key: 1, link: "#", title: "Поиск игры"},
+		{key: 2, link: "#", title: "Поддержка"},
+		{key: 3, link: link_to_user, title: "Профиль"},
+		{key: 4, link: "#", title: "Корзина"},
+		{key: 5, link: "/create_game", title: "Создать игру"},
+	]
 
     const gamePageInfo = {
         viewedAmount: 420,

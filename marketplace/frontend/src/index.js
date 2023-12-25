@@ -7,6 +7,7 @@ import Registration from './registration/Registration';
 import GamePage from './games/GamePage';
 import UserPage from './user_page/UserPage';
 import routerLinks from './utils/router_links'
+import CreateGame from './create_game/CreateGame';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,7 @@ root.render(
             <Route path={routerLinks.main} element={<Main />} />
             <Route path={routerLinks.game_page} element={<GamePage />} />
             <Route path={routerLinks.user_page} element={<UserPage />} />
-            <Route path={routerLinks.create_game} element={<p>Create Game</p>} />
+            <Route path={routerLinks.create_game} element={<CreateGame/>} />
         </Routes>
     </BrowserRouter>
 );
