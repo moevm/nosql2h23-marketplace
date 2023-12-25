@@ -6,7 +6,7 @@ import TrendingGame from "./TrendingGame.js"
 
 const Main = () => {
 	const user = localStorage.getItem("user")
-	const link_to_user = user ? "#": "/";
+	const link_to_user = user ? "/user_page": "/";
 	const headers = [
 		{key: 0, link: "#", title: "Главная страница"},
 		{key: 1, link: "#", title: "Поиск игры"},
