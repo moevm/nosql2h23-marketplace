@@ -60,6 +60,8 @@
 
 #game_genre {
     margin: 20px 0;
+    height: 50px;
+    padding: 0 10px;
 }
 
 #genre_cases {

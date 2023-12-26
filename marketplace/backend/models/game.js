@@ -21,6 +21,10 @@ const offerSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    label: {
+        type: String,
+        required: true
+    },
 })
 
 const commentSchema = new mongoose.Schema({
