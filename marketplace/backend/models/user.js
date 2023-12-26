@@ -59,7 +59,7 @@ const userSchema = new mongoose.Schema({
         default: Date.now
     },
     avatar_data : {
-        type: Buffer,
+        type: String,
         required: false
     },
     purchased_games : {

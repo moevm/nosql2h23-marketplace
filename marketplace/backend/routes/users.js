@@ -59,8 +59,9 @@ router.post("/add", (req, res) => {
         name: req.body.name,
         email: req.body.email,
         is_banned: req.body.is_banned,
-        avatar_data: req.body.avatar_data
+        avatar_data: req.body.avatar_data ? req.body.avatar_data: "https://www.perunica.ru/uploads/posts/2011-10/1319832745_0_6065c_b70de565_l.jpg"
     })
+
     user.save()
         .then((newUser) => {
             res.status(201).json(newUser)
