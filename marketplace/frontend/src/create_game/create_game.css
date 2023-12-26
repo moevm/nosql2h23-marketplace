@@ -56,12 +56,13 @@
 #game_description {
     width: 100%;
     height: 100px;
+    margin-bottom: 20px;
 }
 
 #game_genre {
-    margin: 20px 0;
     height: 50px;
     padding: 0 10px;
+    margin-bottom: 20px;
 }
 
 #genre_cases {
@@ -127,4 +128,8 @@
 .current_price {
     color: #1abc9c;
     font-weight: 700;
+}
+
+#add_offer_section input {
+    padding: 5px;
 }

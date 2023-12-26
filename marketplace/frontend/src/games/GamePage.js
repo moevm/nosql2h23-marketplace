@@ -20,12 +20,10 @@ const GamePage = () => {
 	]
 
     useEffect(() => {
-        console.log("Use effect")
         const fetchData = async () => {
             let game = await getGameById(id);
             game = await game.json()
             setGameData(game)
-            console.log(game)
         }
 
         fetchData()
