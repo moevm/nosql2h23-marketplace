@@ -9,26 +9,34 @@ const db = mongoose.connection;
 const port = process.env.PORT;
 const usersRouter = require("./routes/users");
 const gamesRouter = require("./routes/games")
+const adminRouter = require("./routes/admin")
 const cors = require("cors")
 
 app.use(cors())
 app.use("/games", gamesRouter)
 app.use("/users", usersRouter);
+app.use("/admin", adminRouter);
 app.use(express.json());
 
-db.on("error", (error) =>{
+db.on("error", (error) => {
     console.log(error);
 })
 
-db.once("open", () =>{
-    console.log("Mongodb connected");
+db.once("open", async () => {  
+    const exec = require('child_process').exec;
+
+    exec('mongorestore --db=marketplace ./dbdump/marketplace', (error, stdout, stderr) => {
+        if (error) {
+          console.error(`error: ${error}`);
+          return;
+        }
+        console.log(`stdout: ${stdout}`)
+        console.error(`error: ${stderr}`)
+
+        if(!error)console.log("Mongodb connected");
+      });
 })
 
-
-db.once("close", () =>{
-    console.log("Mongodb disconnected")
-})
-
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log(`Server running on ${port} port`);
 })

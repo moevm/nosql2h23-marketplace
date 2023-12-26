@@ -69,8 +69,8 @@ const onRegFormSubmit = async (navigate) => {
     let res = await addUser(user);
     console.log(res.status)
 
-    if (res["status"] === 200) {
-        const data = await res.json()
+    if (res["status"] === 201) {
+        // const data = await res.json()
         navigate({
             pathname: routerLinks.auth,
             search: "1234" 
