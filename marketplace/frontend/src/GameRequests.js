@@ -5,28 +5,28 @@ export async function getGameById(id) {
     const response = await fetch(rootUrl + gameRootUrl + "id/" + id, {
         method: "GET",
     });
-    return await response.json();
+    return response;
 }
 
 export async function getGameByGenre(genre) {
     const response = await fetch(rootUrl + gameRootUrl + "genre/" + genre, {
         method: "GET",
     });
-    return await response.json();
+    return response;
 }
 
 export async function getRandomNumberOfGames(number) {
     const response = await fetch(rootUrl + gameRootUrl + "random/" + number, {
         method: "GET",
     });
-    return await response.json();
+    return response;
 }
 
 export async function getAllGames() {
     const response = await fetch(rootUrl + gameRootUrl + "all", {
         method: "GET",
     });
-    return await response.json();
+    return response;
 }
 
 export async function addGame(game) {
@@ -37,5 +37,5 @@ export async function addGame(game) {
         },
         body: JSON.stringify(game), 
     });
-    return await response.json();
+    return response;
 }

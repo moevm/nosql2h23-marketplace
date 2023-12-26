@@ -40,26 +40,7 @@ const CreateGame = () => {
         if (!title) alert("Выберите название игры!")
 
         // Image reading
-        const imageFile = document.getElementById("game_cover").files[0];
-        let picture_data;
-        if (!document.getElementById("game_cover").value) {
-            alert("Выберите обложку к игре!")
-        } else {
-            const readImageFile = file => {
-                return new Promise((resolve, reject) => {
-                    const reader = new FileReader();
-                    reader.onload = (event) => {
-                        resolve(event.target.result);
-                    };
-                    reader.onerror = (error) => {
-                        reject(error);
-                    };
-                    reader.readAsBinaryString(file);
-                });
-            }
-            picture_data = await readImageFile(imageFile);
-        }
-
+        const picture_data = document.getElementById("game_cover").value
 
         // Game description
         const description = document.getElementById("game_description").value;
@@ -83,7 +64,7 @@ const CreateGame = () => {
         }
 
         const res = await addGame(game);
-        alert(res.status)
+        alert(res.statusText)
     }
     
     return (
@@ -94,14 +75,9 @@ const CreateGame = () => {
                 <input id="game_label" type="text" placeholder="Название игры"/>
 
                 <h3 for="game_cover">Выберите изображение для обложки игры</h3>
-                <input type="file" id="game_cover" name="game_cover" accept="image/png, image/jpeg" onChange={
+                <input type="text" id="game_cover" name="game_cover" accept="image/png, image/jpeg" onChange={
                     event => {
-                        const file = event.target.files[0];
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            document.getElementById('imageDisplay').setAttribute('src', e.target.result);
-                        }
-                        reader.readAsDataURL(file);
+                        document.getElementById("imageDisplay").src = event.target.value
                     }  
                 }/>
                 <img src="" alt="" id="imageDisplay"/>

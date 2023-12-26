@@ -61,7 +61,7 @@ const gameSchema = new mongoose.Schema({
         required: true
     },
     picture_data : {
-        type: Buffer,
+        type: String,
         required: false
     },
     genre : {
