@@ -21,6 +21,10 @@ const offerSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    label: {
+        type: String,
+        required: true
+    },
 })
 
 const commentSchema = new mongoose.Schema({
@@ -57,7 +61,7 @@ const gameSchema = new mongoose.Schema({
         required: true
     },
     picture_data : {
-        type: Buffer,
+        type: String,
         required: false
     },
     genre : {

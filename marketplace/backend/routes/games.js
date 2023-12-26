@@ -53,8 +53,10 @@ router.get("/all", (req, res) => {
             res.status(500).json({ message: err.message })
         })
 })
+
 // Добавить игру 
 router.post("/add", async (req, res) => {
+    console.log(typeof(req.body), req.body)
     const game = new Game({
         title: req.body.title,
         description: req.body.description,
