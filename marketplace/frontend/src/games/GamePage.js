@@ -12,20 +12,15 @@ const GamePage = () => {
 	const link_to_user = user ? "/user_page": "/";
 	const headers = [
 		{key: 0, link: "/main", title: "Главная страница"},
-		{key: 1, link: "#", title: "Поиск игры"},
-		{key: 2, link: "#", title: "Поддержка"},
 		{key: 3, link: link_to_user, title: "Профиль"},
-		{key: 4, link: "#", title: "Корзина"},
 		{key: 5, link: "/create_game", title: "Создать игру"},
 	]
 
     useEffect(() => {
-        console.log("Use effect")
         const fetchData = async () => {
             let game = await getGameById(id);
             game = await game.json()
             setGameData(game)
-            console.log(game)
         }
 
         fetchData()

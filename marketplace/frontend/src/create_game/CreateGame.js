@@ -10,10 +10,7 @@ const CreateGame = () => {
 	const link_to_user = user ? "/user_page": "/";
 	const headers = [
 		{key: 0, link: "/main", title: "Главная страница"},
-		{key: 1, link: "#", title: "Поиск игры"},
-		{key: 2, link: "#", title: "Поддержка"},
 		{key: 3, link: link_to_user, title: "Профиль"},
-		{key: 4, link: "#", title: "Корзина"},
 		{key: 5, link: "/create_game", title: "Создать игру"},
 	]
 
@@ -75,7 +72,7 @@ const CreateGame = () => {
                 <input id="game_label" type="text" placeholder="Название игры"/>
 
                 <h3 for="game_cover">Выберите изображение для обложки игры</h3>
-                <input type="text" id="game_cover" name="game_cover" accept="image/png, image/jpeg" onChange={
+                <input type="text" id="game_cover" name="game_cover" placeholder="URL картинки" onChange={
                     event => {
                         document.getElementById("imageDisplay").src = event.target.value
                     }  
@@ -110,7 +107,7 @@ const CreateGame = () => {
                 <input id="offer_label" type="text" placeholder="Название сайта"/>
 
                 <label for="offer_link">Ссылка на предложение</label>
-                <input id="offer_link" type="text" placeholder="url предложения"/>
+                <input id="offer_link" type="text" placeholder="URL предложения"/>
 
                 <label for="offer_current_price">Текущая цена</label>
                 <input id="offer_current_price" type="text" placeholder="Текущая цена"/>

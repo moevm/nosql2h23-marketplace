@@ -11,10 +11,7 @@ const UserPage = () => {
 	const link_to_user = userData ? "#": "/";
 	const headers = [
 		{key: 0, link: "/main", title: "Главная страница"},
-		{key: 1, link: "#", title: "Поиск игры"},
-		{key: 2, link: "#", title: "Поддержка"},
 		{key: 3, link: link_to_user, title: "Профиль"},
-		{key: 4, link: "#", title: "Корзина"},
 		{key: 5, link: "/create_game", title: "Создать игру"},
 	]
 
@@ -33,7 +30,7 @@ const UserPage = () => {
             <div className="user_page_wrapper">
                 <MainTitle headers={headers}/>
                 <UserInfo imgLink={userInfo.imgLink} name={userInfo.name} email={userInfo.email} gamesBoughtAmount={userInfo.gamesBoughtAmount} role={userInfo.role} registrationDate={userInfo.registrationDate} />
-                <BoughtGames boughtGames={boughtGames}/>
+                {/* <BoughtGames boughtGames={boughtGames}/> */}
             </div>
         );
     } else {
@@ -62,9 +59,6 @@ const UserInfo = ({imgLink, name, email, gamesBoughtAmount, role, registrationDa
             <div id="user_info_contents">
                 <div id="user_info_image_block">
                     <img src={imgLink} alt="avatar" id="user_image_avatar"/>
-                    <button id="change_avatar" className="btn btn-primary">
-                        Изменить
-                    </button>
                 </div>
                 <div id="user_info_text_block">
                     <div id="user_name">Имя: <b>{name}</b></div>
