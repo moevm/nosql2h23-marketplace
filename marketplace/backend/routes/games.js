@@ -56,7 +56,6 @@ router.get("/all", (req, res) => {
 
 // Добавить игру 
 router.post("/add", async (req, res) => {
-    console.log(typeof(req.body), req.body)
     const game = new Game({
         title: req.body.title,
         description: req.body.description,
