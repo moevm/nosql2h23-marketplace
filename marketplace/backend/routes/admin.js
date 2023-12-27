@@ -14,8 +14,6 @@ router.get("/save", (req, res) => {
           console.error(`error: ${error}`);
           return;
         }
-        // console.log(`stdout: ${stdout}`)
-        // console.error(`error: ${stderr}`)
 
         console.log("Mongodb saved");
         res.status(201)

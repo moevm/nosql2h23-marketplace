@@ -37,7 +37,7 @@ const PopularGameCard = ({imgLink, title, price, currency, gameId}) => {
 		<div className="popular_game_card_info">
 			<span className="popular_game_card_name">{title}</span>
 			<div className="popular_game_card_text">
-				<span className="popular_game_card_price">{currency} {price}</span>
+				<span className="popular_game_card_price">${price}</span>
 			</div>
 		</div>
 	</div>

@@ -67,7 +67,7 @@ const MainCatalogGameCard = ({ imgLink, title, currentPrice, oldPrice, currency,
 		if (oldPrice != null) {
 			return (
 				<span className="main_catalog_name_card_old_price">
-					{currency}{oldPrice}
+					${oldPrice}
 				</span>
 			) 
 		} else {
@@ -88,7 +88,7 @@ const MainCatalogGameCard = ({ imgLink, title, currentPrice, oldPrice, currency,
 				<span className="main_catalog_game_card_name">{title}</span>
 				<div className="main_catalog_game_card_text">
 					<span className="main_catalog_game_card_price">
-						{currency}{currentPrice}
+						${currentPrice}
 						{oldPriceUi()}
 					</span>
 				</div>

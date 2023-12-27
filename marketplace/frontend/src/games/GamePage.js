@@ -79,8 +79,8 @@ const GamePageOffer = ({offerLabel, currentPrice, defaultPrice, currency}) => {
         <div className="game_page_offer">
             <div className="game_page_offer_label">{offerLabel}</div>
             <div className="game_page_offer_prices">
-                <div className="game_page_offer_current_price">{currentPrice} {currency}</div>
-                <div className="game_page_offer_default_price">{defaultPrice} {currency}</div>
+                <div className="game_page_offer_current_price">${currentPrice}</div>
+                <div className="game_page_offer_default_price">${defaultPrice}</div>
             </div>
         </div>
     )
