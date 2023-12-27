@@ -25,13 +25,13 @@ db.on("error", (error) => {
 db.once("open", async () => {  
     const exec = require('child_process').exec;
 
-    exec('mongorestore --db=marketplace ./dbdump/marketplace', (error, stdout, stderr) => {
-        if (error) {
+    exec('mongorestore ./dbdump', (error, stdout, stderr) => {
+        if (error) { 
           console.error(`error: ${error}`);
           return;
         }
-        console.log(`stdout: ${stdout}`)
-        console.error(`error: ${stderr}`)
+        // console.log(`stdout: ${stdout}`)
+        // console.error(`error: ${stderr}`)
 
         if(!error)console.log("Mongodb connected");
       });
